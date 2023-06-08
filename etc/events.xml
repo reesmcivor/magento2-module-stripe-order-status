@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="sales_order_place_before">
+        <observer name="stripe_payments_place_order_before" instance="ReesMcIvor\StripeOrderStatus\Observer\OrderObserver" />
+    </event>
+    <event name="sales_order_place_after">
+        <observer name="stripe_payments_place_order_after" instance="ReesMcIvor\StripeOrderStatus\Observer\OrderObserver" />
+    </event>
+</config>
